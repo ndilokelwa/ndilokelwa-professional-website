@@ -1,0 +1,80 @@
+##################################
+# Node.js / React / Jest
+##################################
+
+# Dependencies
+node_modules/
+
+# Production build output
+build/
+dist/
+
+# Environment variables
+.env
+
+# Jest test coverage
+coverage/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+.vscode/
+.DS_Store
+
+##################################
+# Python / ML / Pytest
+##################################
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+env/
+ENV/
+.Python
+
+# Environment files
+*.env
+.env/
+
+# Jupyter Notebook
+*.ipynb_checkpoints
+.lab/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test / Coverage / Pytest
+.coverage
+.cache/
+.tox/
+pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+##################################
+# OS / Editor / Misc
+##################################
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor backup/swap files
+*.swp
+*.swo
+*~

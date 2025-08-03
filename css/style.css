@@ -1,0 +1,191 @@
+body {
+  background-color: rgba(256, 256, 256, 0.9);
+  background-image: url('../assets/noise.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-blend-mode: lighten;
+  font-family: Inter, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.card-bg-effect {
+    background-color: rgba(140, 140, 140, 0.5);
+    height: 20rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 2;
+    border: none !important;
+}
+
+.card-bg-effect-small {
+    background-color: rgba(140, 140, 140, 0.5);
+    height: 9.5rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 2;
+    border: none !important;
+}
+
+.card-bg-effect-stack {
+    background-color: rgba(140, 140, 140, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 3;
+    border: none !important;
+    width: 5rem;
+}
+
+.behind-text {
+  position: absolute;
+  top: -40px;
+  left: 40%;
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 1);
+  z-index: 1;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* images */
+.uniform-image-big {
+  width: 100%;         /* desired width */
+  height: 20rem;        /* desired height */
+  object-fit: cover;    /* crop to fill box */
+  object-position: center; /* center the image */
+  border-radius: 8px;   /* optional rounding */
+}
+
+.stack {
+  height: 3rem;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  
+  /* fade effect at edges */
+  -webkit-mask-image: linear-gradient(to right, 
+    transparent 0%, 
+    black 10%, 
+    black 90%, 
+    transparent 100%);
+  mask-image: linear-gradient(to right, 
+    transparent 0%, 
+    black 10%, 
+    black 90%, 
+    transparent 100%);
+}
+
+.scrolling-content {
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+/* Cor de fundo quando o switch está ativo */
+.form-check-input:checked {
+  background-color: rgba(140, 140, 140, 0.5); /* ou uma cor como #28a745 */
+  border-color: rgba(140, 140, 140, 0.5);
+}
+
+/* Cor do botão (o círculo) */
+.form-check-input {
+  background-color: #ccc;
+  border-color: #ccc;
+}
+
+/* Mudar o botão quando estiver ativo */
+.form-check-input:checked::before {
+  background-color: #fff; /* cor do círculo */
+}
+
+
+/* Animate the words on top */
+
+.andi-title span {
+  display: inline-block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.andi-title span.animate-out {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.andi-title span.animate-in {
+  transform: translateY(10px);
+  opacity: 0;
+  animation: riseUp 0.4s forwards;
+}
+
+@keyframes riseUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Position text below */
+.bottom-text {
+  font-weight: 600;
+  position: absolute; 
+  bottom: 1rem; 
+  left: 1rem;
+}
+
+.bottom-icon {
+  position: absolute; 
+  bottom: 1rem; 
+  right: 1rem;
+}
+
+/* The animation code for word inside the card */
+
+.letter {
+  display: inline-block;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.animate-out {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.animate-in {
+  transform: translateY(20%);
+  opacity: 0;
+  animation: riseIn 0.3s forwards;
+}
+
+@keyframes riseIn {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 767.98px) {
+  .disappear {
+    display: none !important;
+  }
+}
