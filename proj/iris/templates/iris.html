@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Essential Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- SEO: Title and Description -->
+        <title>Ndilokelwa Luis | Machine Learning Engineer</title>
+        <meta name="description" content="Personal portfolio of Ndilokelwa Luis — Machine Learning Engineer. Explore projects, skills, and contact information.">
+
+        <!-- SEO: Keywords (less important in 2025, but okay if relevant) -->
+        <meta name="keywords" content="Ndilokelwa Luis, ml engineer, machine learning, python, api, europe, ai data trainer">
+
+        <!-- Author Info -->
+        <meta name="author" content="Ndilokelwa Luis">
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://ndilokelwa.tech/">
+
+        <!-- Open Graph for Social Sharing (Facebook, LinkedIn, etc.) -->
+        <meta property="og:title" content="Ndilokelwa Luis | Machine Learning Engineer">
+        <meta property="og:description" content="Explore the professional portfolio of Ndilokelwa Luis — Machine Learning Engineer.">
+        <meta property="og:image" content="https://ndilokelwa.tech/assets/og-image.jpg">
+        <meta property="og:url" content="https://ndilokelwa.tech/">
+        <meta property="og:type" content="website">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Ndilokelwa Luís | Machine Learning Engineer">
+        <meta name="twitter:description" content="Explore the professional portfolio of Ndilokelwa Luis — Machine Learning Engineer.">
+        <meta name="twitter:image" content="https://ndilokelwa.tech/assets/og-image.jpg">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/logo/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/logo/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/logo/favicon-16x16.png') }}">
+        <link rel="icon" href="{{ url_for('static', filename='assets/logo/favicon.ico') }}">
+        <link rel="manifest" href="{{ url_for('static', filename='assets/logo/site.webmanifest') }}">
+       
+        <!-- Fonts and Stylesheets -->
+         <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+        <!-- Structured Data (optional, advanced SEO) -->
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Ndilokelwa Luís",
+            "url": "https://ndilokelwa.tech/",
+            "sameAs": [
+                "https://github.com/ndilokelwa",
+                "https://linkedin.com/in/andiluis"
+            ],
+            "jobTitle": "STEM AI Data Trainer",
+            "worksFor": {
+                "@type": "Invisible Technologies",
+                "name": "Contractor"
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row alingn-content-center">
+                    <div class="col col-2 col-md-1 align-text-right">
+                        <a href="../../../portfolio.html" class="text-decoration-none text-reset">
+                            <i class="bi bi-arrow-left fs-6"></i>
+                            <span class="intro small disappear">
+                                <span class="lang-en">Portfolio</span>
+                                <span class="lang-pt d-none">Portefólio</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col col-3 col-md-4 align-text-right">
+                        <span class="intro" id="intro-name" data-text-large="Ndilokelwa Luis" data-text-small="Andi Luis"></span>
+                    </div>
+                    <div class="col col-3 col-md-4 align-text-right">
+                        <span class="intro" id="intro-role" data-text-large="Machine Learning Engineer" data-text-small="ML Engineer"></span>
+                    </div>
+                    <div class="col col-2 col-md-2 align-text-left disappear">
+                        <span id="intro-location"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                        <span id="intro-time"></span>
+                    </div>
+                    <div class="col col-1 col-md-1 form-check form-switch ms-auto d-lg-block d-flex">
+                        <input class="form-check-input" type="checkbox" id="languageSwitch">
+                        <label class="form-check-label" for="languageSwitch"><span class="lang"></span></label>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="container">
+                <div class="row my-5">
+                    <div class="col col-12">
+                        <div class="fade-line display-2 text-center" style="animation-delay: 0.2s;">Iris Flower Classifier</div>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col col-7 lang-en" id="animated-text">
+                        <p>
+                            <span>The</span> <span>Iris</span> <span>Flower</span> <span>dataset</span> <span>is</span> <span>well</span> <span>known.</span>
+                            <span>It</span> <span>is</span> <span>one</span> <span>of</span> <span>the</span> <span>first</span> <span>datasets</span> <span>that</span>
+                            <span>aspiring</span> <span>Machine</span> <span>Learning</span> <span>Engineers</span> <span>tackle</span> <span>on.</span>
+                        </p>
+                        <p>
+                            <span>The</span> <span>goal</span> <span>of</span> <span>the</span> <span>Iris</span> <span>Flower</span> <span>project</span> <span>is</span> <span>to</span>
+                            <span>identify</span> <span>which</span> <span>Iris</span> <span>Flower</span> <span>it</span> <span>is</span> <span>(Setosa,</span> <span>Versicolor,</span>
+                            <span>or</span> <span>Viriginica)</span> <span>based</span> <span>solely</span> <span>on</span> <span>Sepal</span> <span>and</span> <span>Petal</span>
+                            <span>characteristics</span> <span>(width</span> <span>and</span> <span>length).</span>
+                        </p>
+                        <p>
+                            <span>To</span> <span>this</span> <span>end,</span> <span>we</span> <span>choose</span> <span>a</span> <span>simple</span>
+                            <span>Supervised</span> <span>Learning</span> <span>algorith:</span> <span>Logistic</span> <span>Regression.</span>
+                            <span>To</span> <span>know</span> <span>more</span> <span>about</span> <span>this</span> <span>project,</span> <span>and</span>
+                            <span>the</span> <span>algorithm</span> <span>behind</span> <span>it,</span> <span>read</span> <span>my</span>
+                            <a href="../../../blog/logistic-regression.html" target="_blank" class="text-decoration-none"><span class="special-word">blog</span></a> <span>post.</span>
+                        </p>
+                    </div>
+                    <div class="col col-5 lang-en">
+                        <div class="card mb-3 d-flex flex-row card-bg-effect">
+                            <div class="col-4 p-2">
+                            <img class="img-fluid rounded" src="{{ url_for('static', filename='assets/setosa.jpg') }}" alt="Setosa">
+                            </div>
+                            <div class="col-8 p-2">
+                            <h3>Setosa</h3>
+                            <p>
+                                <a href="https://en.wikipedia.org/wiki/Iris_setosa" target="_blank" class="text-decoration-none iris-word">Iris setosa</a>
+                                is a rhizomatous perennial from a wide range across the Arctic sea.
+                            </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 d-flex flex-row card-bg-effect">
+                            <div class="col-4 p-2">
+                            <img class="img-fluid rounded" src="{{ url_for('static', filename='assets/versicolor.jpg') }}" alt="Versicolor">
+                            </div>
+                            <div class="col-8 p-2">
+                            <h3>Versicolor</h3>
+                            <p>
+                                <a href="https://en.wikipedia.org/wiki/Iris_versicolor" target="_blank" class="text-decoration-none iris-word">Iris versicolor</a>
+                                is an herbaceous perennial species, native to North America.
+                            </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 d-flex flex-row card-bg-effect">
+                            <div class="col-4 p-2">
+                            <img class="img-fluid rounded" src="{{ url_for('static', filename='assets/virginica.png') }}" alt="Virginica">
+                            </div>
+                            <div class="col-8 p-2">
+                            <h3>Virginica</h3>
+                            <p>
+                                <a href="https://en.wikipedia.org/wiki/Iris_virginica" target="_blank" class="text-decoration-none iris-word">Iris virginica</a>
+                                is a perennial species, native to central and eastern North America.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col col-7 lang-pt d-none" id="animated-text-pt">
+                        <p>
+                            <span>O</span> <span>conjunto</span> <span>de</span> <span>dados</span> <span>das</span> <span>Flores</span> <span>Íris</span>
+                            <span>é</span> <span>bastante</span> <span>conhecido.</span> <span>É</span> <span>um</span> <span>dos</span>
+                            <span>primeiros</span> <span>conjuntos</span> <span>de</span> <span>dados</span> <span>com</span> <span>que</span>
+                            <span>aspirantes</span> <span>a</span> <span>Engenheiros</span> <span>de</span> <span>Machine</span>
+                            <span>Learning</span> <span>costumam</span> <span>trabalhar.</span>
+                        </p>
+                        <p>
+                            <span>O</span> <span>objetivo</span> <span>do</span> <span>projeto</span> <span>Iris</span> <span>Flower</span>
+                            <span>é</span> <span>identificar</span> <span>de</span> <span>que</span> <span>flor</span> <span>Íris</span>
+                            <span>se</span> <span>trata</span> <span>(Setosa,</span> <span>Versicolor</span> <span>ou</span> <span>Virginica),</span>
+                            <span>com</span> <span>base</span> <span>apenas</span> <span>nas</span> <span>características</span> <span>das</span>
+                            <span>sépala</span> <span>e</span> <span>pétalas</span> <span>(largura</span> <span>e</span> <span>comprimento).</span>
+                        </p>
+                        <p>
+                            <span>Para</span> <span>isso,</span> <span>escolhemos</span> <span>um</span> <span>algoritmo</span> <span>simples</span>
+                            <span>de</span> <span>Aprendizagem</span> <span>Supervisionada:</span> <span>a</span> <span>Regressão</span> <span>Logística.</span>
+                            <span>Para</span> <span>saber</span> <span>mais</span> <span>sobre</span> <span>este</span> <span>projeto</span>
+                            <span>e</span> <span>o</span> <span>algoritmo</span> <span>por</span> <span>detrás</span> <span>dele,</span>
+                            <span>lê</span> <span>o</span> <span>meu</span> <a href="../../../blog/logistic-regression.html" target="_blank" class="text-decoration-none"><span class="special-word">artigo</span></a> <span>no</span> <span>blogue.</span>
+                        </p>
+                    </div>
+                    <div class="col col-5 lang-pt d-none">
+                        <div class="card mb-3 d-flex flex-row card-bg-effect">
+                            <div class="col-4 p-2">
+                            <img class="img-fluid rounded" src="{{ url_for('static', filename='assets/setosa.jpg') }}" alt="Setosa">
+                            </div>
+                            <div class="col-8 p-2">
+                            <h3>Setosa</h3>
+                            <p>
+                                <a href="https://en.wikipedia.org/wiki/Iris_setosa" target="_blank" class="text-decoration-none iris-word">A iris setosa</a>
+                                é uma planta perene, encontrada ao longo do mar Ártico.
+                            </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 d-flex flex-row card-bg-effect">
+                            <div class="col-4 p-2">
+                            <img class="img-fluid rounded" src="{{ url_for('static', filename='assets/versicolor.jpg') }}" alt="Versicolor">
+                            </div>
+                            <div class="col-8 p-2">
+                            <h3>Versicolor</h3>
+                            <p>
+                                <a href="https://en.wikipedia.org/wiki/Iris_versicolor" target="_blank" class="text-decoration-none iris-word">A iris versicolor</a>
+                                é uma espécie herbácea perene, nativa da América do Norte.
+                            </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 d-flex flex-row card-bg-effect">
+                            <div class="col-4 p-2">
+                            <img class="img-fluid rounded" src="{{ url_for('static', filename='assets/virginica.png') }}" alt="Virginica">
+                            </div>
+                            <div class="col-8 p-2">
+                            <h3>Virginica</h3>
+                            <p>
+                                <a href="https://en.wikipedia.org/wiki/Iris_virginica" target="_blank" class="text-decoration-none iris-word">A iris virginica</a>
+                                é uma espécie perene, nativa da América do Norte central e oriental.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <form method="POST" class="text-center">
+                <div class="d-flex justify-content-center flex-wrap gap-2 mb-3">
+                    <input type="number" name="sepal-length" required class="form-control" placeholder="Sepal Length" min="4.3" max="7.9" step="0.1" style="width: 160px;">
+                    <input type="number" name="sepal-width" required class="form-control" placeholder="Sepal Width" min="2.0" max="4.4" step="0.1" style="width: 160px;">
+                    <input type="number" name="petal-length" required class="form-control" placeholder="Petal Length" min="1.0" max="6.9" step="0.1" style="width: 160px;">
+                    <input type="number" name="petal-width" required class="form-control" placeholder="Petal Width" min="0.1" max="2.5" step="0.1" style="width: 160px;">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Predict Iris Flower</button>
+
+                <!-- {% if prediction %}
+                    <div class="mt-3 fw-bold text-success">
+                    Predicted Class: {{ prediction }}
+                    </div>
+                {% endif %} -->
+            </form>
+        </section>
+        <div class="modal fade" id="predictionModal" tabindex="-1" aria-labelledby="predictionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-center">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="predictionModalLabel">Prediction Result</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 id="predicted-species"></h4>
+                    <img id="predicted-image" src="" alt="Predicted Iris" class="img-fluid rounded" style="max-height: 250px;">
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="prediction-result" data-prediction="{{ prediction|lower }}"></div>
+        <hr class="mt-3 mb-3">
+        <section  class="mb-5">
+            <div class="container">
+                <div class="row h4">
+                    <div class="col col-4">
+                        <a href="mailto:andi@ndilokelwa.tech" class="text-decoration-none text-reset">andi@ndilokelwa.tech</a>
+                    </div>
+                    <div class="col col-4 text-center">
+                        <a href="https://www.linkedin.com/in/andiluis" target="_blank" class="text-decoration-none text-reset">LinkedIn</a><br>
+                        <a href="https://github.com/ndilokelwa" target="_blank" class="text-decoration-none text-reset">GitHub</a>
+                    </div>
+                    <div class="col col-4 text-end">
+                        <a href="assets/cv.pdf" target="_blank" download="resume.pdf" class="text-decoration-none text-reset">Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bootstrap JS (optional) -->
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const prediction = "{{ prediction|lower }}";
+
+                if (prediction && prediction !== "none" && prediction !== "error") {
+                const nameMap = {
+                    "setosa": "Iris Setosa",
+                    "versicolor": "Iris Versicolor",
+                    "virginica": "Iris Virginica"
+                };
+
+                const imageMap = {
+                    "setosa": "{{ url_for('static', filename='assets/setosa.jpg') }}",
+                    "versicolor": "{{ url_for('static', filename='assets/versicolor.jpg') }}",
+                    "virginica": "{{ url_for('static', filename='assets/virginica.png') }}"
+                };
+
+                if (nameMap[prediction]) {
+                    document.getElementById("predicted-species").innerText = nameMap[prediction];
+                    document.getElementById("predicted-image").src = imageMap[prediction];
+
+                    const modal = new bootstrap.Modal(document.getElementById('predictionModal'));
+                    modal.show();
+                }
+                }
+            });
+        </script>
+
+    </body>
+</html>

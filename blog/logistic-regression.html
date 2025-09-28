@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Essential Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- SEO: Title and Description -->
+        <title>Ndilokelwa Luis | Machine Learning Engineer</title>
+        <meta name="description" content="Personal portfolio of Ndilokelwa Luis — Machine Learning Engineer. Explore projects, skills, and contact information.">
+
+        <!-- SEO: Keywords (less important in 2025, but okay if relevant) -->
+        <meta name="keywords" content="Ndilokelwa Luis, ml engineer, machine learning, python, api, europe, ai data trainer">
+
+        <!-- Author Info -->
+        <meta name="author" content="Ndilokelwa Luis">
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://ndilokelwa.tech/">
+
+        <!-- Open Graph for Social Sharing (Facebook, LinkedIn, etc.) -->
+        <meta property="og:title" content="Ndilokelwa Luis | Machine Learning Engineer">
+        <meta property="og:description" content="Explore the professional portfolio of Ndilokelwa Luis — Machine Learning Engineer.">
+        <meta property="og:image" content="https://ndilokelwa.tech/assets/og-image.jpg">
+        <meta property="og:url" content="https://ndilokelwa.tech/">
+        <meta property="og:type" content="website">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Ndilokelwa Luís | Machine Learning Engineer">
+        <meta name="twitter:description" content="Explore the professional portfolio of Ndilokelwa Luis — Machine Learning Engineer.">
+        <meta name="twitter:image" content="https://ndilokelwa.tech/assets/og-image.jpg">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/logo/favicon-16x16.png">
+        <link rel="icon" href="../assets/logo/favicon.ico">
+        <link rel="manifest" href="../assets/logo/site.webmanifest">
+       
+        <!-- Fonts and Stylesheets -->
+         <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Structured Data (optional, advanced SEO) -->
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Ndilokelwa Luís",
+            "url": "https://ndilokelwa.tech/",
+            "sameAs": [
+                "https://github.com/ndilokelwa",
+                "https://linkedin.com/in/andiluis"
+            ],
+            "jobTitle": "STEM AI Data Trainer",
+            "worksFor": {
+                "@type": "Invisible Technologies",
+                "name": "Contractor"
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row alingn-content-center">
+                    <div class="col col-2 col-md-1 align-text-right">
+                        <a href="../blog.html" class="text-decoration-none text-reset">
+                            <i class="bi bi-arrow-left fs-6"></i>
+                            <span class="intro small disappear">
+                                <span class="lang-en">Blog</span>
+                                <span class="lang-pt d-none">Blogue</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col col-3 col-md-4 align-text-right">
+                        <span class="intro" id="intro-name" data-text-large="Ndilokelwa Luis" data-text-small="Andi Luis"></span>
+                    </div>
+                    <div class="col col-3 col-md-4 align-text-right">
+                        <span class="intro" id="intro-role" data-text-large="Machine Learning Engineer" data-text-small="ML Engineer"></span>
+                    </div>
+                    <div class="col col-2 col-md-2 align-text-left disappear">
+                        <span id="intro-location"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                        <span id="intro-time"></span>
+                    </div>
+                    <div class="col col-1 col-md-1 form-check form-switch ms-auto d-lg-block d-flex">
+                        <input class="form-check-input" type="checkbox" id="languageSwitch">
+                        <label class="form-check-label" for="languageSwitch"><span class="lang"></span></label>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="container my-5">
+  <h1 class="mb-4">Logistic Regression: The Engine Behind My Iris Flower Classifier</h1>
+  <div class="row">
+    <!-- Left Navigation -->
+    <nav class="col-md-3">
+      <ul class="list-unstyled sticky-top" style="top: 100px; color: #ffc107;">
+        <li><a href="#intro" class="nav-link px-0 py-1"><span class="lang-en">Introduction</span><span class="lang-pt d-none">Introdução</span></a></li>
+        <li><a href="#math" class="nav-link px-0 py-1"><span class="lang-en">The Math Behind It</span><span class="lang-pt d-none">O Fundamento Matemático</span></a></li>
+        <li><a href="#implementation" class="nav-link px-0 py-1"><span class="lang-en">Python Implementation</span><span class="lang-pt d-none">A Implementação em Python</span></a></li>
+        <li><a href="#conclusion" class="nav-link px-0 py-1"><span class="lang-en">Conclusion</span><span class="lang-pt d-none">Conclusão</span></a></li>
+        <li><a href="#references" class="nav-link px-0 py-1"><span class="lang-en">References</span><span class="lang-pt d-none">Referências</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Vertical Divider -->
+    <div class="col-md-1 d-none d-md-flex justify-content-center">
+      <div style="width:1px; background-color:#ccc; height:100%;"></div>
+    </div>
+
+    <!-- Article Content -->
+    <article class="col-md-8">
+        <section id="intro" class="mb-5">
+            <div class="lang-en">
+                <h2>Introduction</h2>
+                <p>Logistic Regression is a foundational algorithm in Machine Learning. It is a generalization of a linear model, designed to solve both binary and multi-class classification problems by modeling the probability of a given class or event.</p>
+                <p>At its core, this model relies on a monotonic, differentiable surrogate function — the logistic function — to approximate the behavior of a unit-step function. Originally developed in the 19th century to describe population growth and autocatalytic chemical reactions, the logistic function remains widely used today in modeling biological systems, market penetration of technologies, and more.</p>
+                <p>Often referred to as Logit Regression, this algorithm operates by applying the logarithm of odds — a measure of the relative likelihood that a feature belongs to a positive class in binary classification tasks.</p>
+            </div>
+            <div class="lang-pt d-none">
+                <h2>Introdução</h2>
+                <p>A Regressão Logística é um algoritmo fundamental em Aprendizagem Automática (Machine Learning). Trata-se de uma generalização de um modelo linear, utilizada para resolver problemas de classificação binária e multiclasse, modelando a probabilidade de ocorrência de determinada classe ou evento.
+                <p>Este modelo baseia-se numa função substituta monótona e diferenciável — a função logística — para aproximar o comportamento de uma função degrau. A função logística foi originalmente desenvolvida no século XIX para descrever o crescimento populacional e o curso de reações químicas autocatalíticas. Ainda hoje é amplamente utilizada para modelar o crescimento de populações e a penetração no mercado de novos produtos e tecnologias.</p>
+                <p>A Regressão Logística é também conhecida como Regressão Logit, pois utiliza o logaritmo das probabilidades (log odds). Estas probabilidades expressam a razão entre a hipótese de um dado exemplo pertencer à classe positiva e a de pertencer à classe negativa — uma medida da sua verosimilhança relativa num contexto binário.</p>
+            </div>
+        </section>
+
+        <section id="math" class="mb-5">
+            <div>
+                <h2 class="lang-en">The Math Behind It</h2>
+                <h2 class="lang-t d-none">O Fundamento Matemático</h2>
+
+                <h4 class="lang-en">Generalized Linear Regression Model</h4>
+                <h4 class="lang-pt d-none">Modelo de Regressão Linear Genralizado</h4>
+                <p class="lang-en">A linear regression problem consists of learning the function:</p>
+                <p class="lang-pt d-none">O problema de regressão linear consiste em aprender a função:</p>
+
+                $$\begin{equation}
+                    f(x) = wx + b  \label{eq:uni-lin},
+                \end{equation}$$
+
+                <p class="lang-en">such that</p>
+                <p class="lang-pt d-none">tal que</p>
+                
+                $$\begin{equation}
+                    f(x_i) \approx y_i, \quad i = 1, ..., m.
+                \end{equation}$$
+
+
+                <p class="lang-en">More generally, each sample \(i\) is described by \(d\) features. In such cases, the problem becomes:</p>
+                <p class="lang-pt d-none">Geralmente, cada amostra \(i\) é descrita por \(d\) variáveis. Nesses casos, o problema torna-se:</p>
+
+                $$\begin{equation}
+                f(\mathbf{x}) = \mathbf{w}^T \mathbf{x} + b, \label{eq:multi-lin}
+                \end{equation}$$
+
+                <p class="lang-en">such that</p>
+                <p class="lang-pt d-none">tal que</p>
+                
+                $$\begin{equation}
+                    f(\mathbf{x}_i) \approx y_i, \quad i = 1, ..., m.
+                \end{equation}$$
+
+                <p class="lang-en">where \( \mathbf{w} = (w_1, w_2, ..., w_d) \), \( \mathbf{x}_i = (x_{1i}, x_{2i}, ..., x_{di}) \). Equation \ref{eq:multi-lin} is known as the multivariate linear regression problem.</p>
+                <p class="lang-pt d-none">onde \( \mathbf{w} = (w_1, w_2, ..., w_d) \), \( \mathbf{x}_i = (x_{1i}, x_{2i}, ..., x_{di}) \). A Equação \ref{eq:multi-lin} é conhecida como o problema de regressão linear multivariável.</p>
+
+                <p class="lang-en">In this context, the goal is to approximate the target label \(y\) with a linear function:</p>
+                <p class="lang-pt d-none">Neste contexto, o objectivo é aproximar a variável alvo \(y\) com a função linear:</p>
+
+                $$\begin{equation}
+                y = \mathbf{w}^T \mathbf{x} + b. \label{eq:model-lr}
+                \end{equation}$$
+
+                <p class="lang-en">But what if we want to model a transformation of \(y\) instead of \(y\) itself? We can accomplish this by introducing a monotonic differentiable function \(g\), so that:</p>
+                <p class="lang-pt d-none">Mas, e se quisermos modelar uma transformação de \(y\) ao invés do próprio \(y\)? Podemos atingir este objectivo ao introduzir uma função monotónica diferenciável \(g\), tal que:</p>
+
+                $$\begin{equation}
+                y = g^{-1}(\mathbf{w}^T \mathbf{x} + b). \label{eq:general}
+                \end{equation}$$
+
+                <p class="lang-en">Function \(g(\cdot)\), called link function, maps the input space to the output space. Equation \ref{eq:general} defines a Generalized Linear Model (GLM).</p>
+                <p class="lang-pt d-none">A função \(g(\cdot)\), designada de função de ligação (link), mapeia o espaço do input para o espaço do output. A Equação \ref{eq:general} define o Modelo Linear Generalizado (GLM).</p>
+
+                <h4 class="lang-en">Logistic Regression Model</h4>
+                <h4 class="lang-pt d-none">Modelo de Regressão Logística</h4>
+
+                <p class="lang-en">In a binary classification problem where the target output is either 0 or 1, we can use a GLM by choosing an appropriate link function.</p>
+                <p class="lang-pt d-none">Num problem de classificação binária, aonde o output alvo é ou 0 ou 1, podemos usar o GLM escolhendo uma função de ligação apropriada.</p>
+
+                <p class="lang-en">A common choice is the logistic (sigmoid) function:</p>
+                <p class="lang-pt d-none">Uma escolha comum é a função logística (sigmóide):</p>
+
+                $$\begin{equation}
+                y = \frac{1}{1 + e^{-z}} = \frac{e^z}{1 + e^z} \label{eq:log-function}
+                \end{equation}$$
+
+                <p class="lang-en">This function connects the linear prediction \(z\) to an output value \(y\) close to 0 or 1, as shown in Figure <a href="#fig-sigm">1</a>.</p>
+                <p class="lang-pt d-none">Esta função liga a previsão linear \(z\) a um valor de saída (output) perto de 0 ou 1, como apresentado na Figura <a href="#fig-sigm">1</a>.</p>
+
+                <figure id="fig-sigm">
+                <img src="../assets/blog-iris/sigm.png" alt="Logistic Function" width="400">
+                <figcaption>Figure 1: Logistic Function.</figcaption>
+                </figure>
+
+                <p class="lang-en">Substituting into the GLM, we obtain:</p>
+                <p class="lang-pt d-none">Substituíndo no GLM, obtemos:</p>
+
+                $$\begin{equation}
+                y = \frac{1}{1 + e^{-(\mathbf{w}^T \mathbf{x} + b)}}. \label{eq:logit}
+                \end{equation}$$
+
+                <p class="lang-en">Let \(\beta^T \mathbf{x} = \beta_0 x_0 + \beta_1 x_1 + ... + \beta_d x_d = \mathbf{w}^T \mathbf{x} + b\), with \(\beta_0 = b\), \(\beta_j = w_j\), and \(x_0 = 1\).</p>
+                <p class="lang-pt d-none">Deixe \(\beta^T \mathbf{x} = \beta_0 x_0 + \beta_1 x_1 + ... + \beta_d x_d = \mathbf{w}^T \mathbf{x} + b\), com \(\beta_0 = b\), \(\beta_j = w_j\), e \(x_0 = 1\).</p>
+
+                <p class="lang-en">Solving Equation \ref{eq:logit} for \(\beta^T \mathbf{x}\):</p>
+                <p class="lang-pt d-none">Resolvendo a Equação \ref{eq:logit} para \(\beta^T \mathbf{x}\):</p>
+
+                $$\begin{eqnarray}
+                y &=& \frac{1}{1 + e^{-\beta^T \mathbf{x}}} \nonumber \\
+                \frac{1}{y} &=& 1 + e^{-\beta^T \mathbf{x}} \nonumber \\
+                e^{\beta^T \mathbf{x}} &=& \frac{y}{1 - y} \nonumber \\
+                \beta^T \mathbf{x} &=& \ln\left( \frac{y}{1 - y} \right) \label{eq:ded-odds}
+                \end{eqnarray}$$
+
+                <p class="lang-en">The quantity \(\frac{y}{1 - y}\) is called the <em>odds</em>, representing the relative likelihood of the sample being positive. Thus, logistic regression approximates the <em>log-odds</em> of the true labels using a linear model — hence the name "logit regression."</p>
+                <p class="lang-pt d-none">A quantidade \(\frac{y}{1 - y}\) é designada por <em>chances</em>, representando a verosimilhança relativa de uma amostra ser positiva. Assim, a regressão logística aproxima o logarítmo das chances (<em>log-odds</em>) da variável alvo verdadeira usando um modelo linear.</p>
+
+                <p class="lang-en">If we denote \(p(Y=1|\mathbf{x}_i) = \pi(\mathbf{x}_i)\), then:</p>
+                <p class="lang-pt d-none">Denotando \(p(Y=1|\mathbf{x}_i) = \pi(\mathbf{x}_i)\), então:</p>
+
+                $$\begin{equation}
+                g(\mathbf{x}) = \ln\left( \frac{\pi(\mathbf{x}_i)}{1 - \pi(\mathbf{x}_i)} \right) = \beta^T \mathbf{x}. \label{eq:log-odds}
+                \end{equation}$$
+
+                <p class="lang-en">Solving for \(\pi(\mathbf{x}_i)\):</p>
+                <p class="lang-pt d-none">Resolvendo para \(\pi(\mathbf{x}_i)\):</p>
+
+                $$\begin{equation}
+                \pi(\mathbf{x}_i) = \frac{e^{\beta^T \mathbf{x}}}{1 + e^{\beta^T \mathbf{x}}}.
+                \end{equation}$$
+
+                <p class="lang-en">The likelihood of a single observation \((\mathbf{x}_i, y_i)\) is then:</p>
+                <p class="lang-pt d-none">A verosimilhança de uma única obervação \((\mathbf{x}_i, y_i)\) é então:</p>
+
+                $$\begin{equation}
+                \pi(\mathbf{x}_i)^{y_i} [1 - \pi(\mathbf{x}_i)]^{1 - y_i}
+                \end{equation}$$
+
+                <p class="lang-en">Assuming independence, the total likelihood becomes:</p>
+                <p class="lang-pt d-none">Assumindo independência, a verosimilhança total fica:</p>
+
+                $$\begin{equation}
+                l(\beta) = \prod_{i=1}^m \pi(\mathbf{x}_i)^{y_i} [1 - \pi(\mathbf{x}_i)]^{1 - y_i}. \label{eq:likelihood}
+                \end{equation}$$
+
+                <p class="lang-en">Taking the log of Equation \ref{eq:likelihood} gives us the log-likelihood function:</p>
+                <p class="lang-pt d-none">Fazendo o logaritimo da Equação \ref{eq:likelihood} dá-nos a função log-verosimilhança:</p>
+
+                $$\begin{equation}
+                L(\beta) = \ln l(\beta) = \sum_{i=1}^m \left\{ y_i \ln[\pi(\mathbf{x}_i)] + (1 - y_i)\ln[1 - \pi(\mathbf{x}_i)] \right\}. \label{eq:log-likelihood}
+                \end{equation}$$
+
+                <p class="lang-en">The optimal \(\beta\) are the ones that maximize the log-likelihood, according to the principle of maximum likelihood. This extreme point is given when the gradient of the function equals to zero:</p>
+                <p class="lang-pt d-none">Os \(\beta\) óptimos são aqueles que maximizam a log-verosimilhança, de acordo com o princípio da máxima verosimilhança. Este ponto extremo é dado quando o gradiente da função é igualada a zero:</p>
+
+                $$\begin{equation}
+                \frac{\partial L(\beta)}{\partial \beta_k} = \sum_{i=1}^m x_k [y_i - \pi(\mathbf{x}_i)] = 0. \label{eq:gradient}
+                \end{equation}$$
+
+
+                <p class="lang-en">We can now apply optimization algorithms like Newton-Raphson to find the parameters that best fit the model.</p>
+                <p class="lang-pt d-none">Estamos agora em posição de aplicar algoritimos de otimização, como o Newton-Raphson, para encontrar os parâmetros que melhor ajustam o modelo.</p>
+                
+                <h4 class="lang-en">The Multinomial Logistic Regression Model: The Iris Flower Classifier</h4>
+                <h4 class="lang-pt d-none">O Modelo de Regressão Logística Multinominal: O Classificador de Flores Íris</h4>
+                
+                <p class="lang-en">When the output of the classification problem has more than two levels, and these levels are nominal, we find ourselves with a <i>discrete choice model</i> or a <i>multinomial logistic regression model</i>.</p>
+                <p class="lang-pt d-none">Quando o output do problema de classifcação tem mais de dois níveis, e esses níveis são nominais, deparamo-nos com um <i>modelo de escolha discreta</i> ou um <i>modelo de regressão logística nominal</i>.</p>
+                
+                <p class="lang-en">In the case of the Iris Flower Classifier problem, we have three outcomes: setosa (0), virginica (1), or versicolor (2). So, instead of relying on one logit function, parametrized on the logit of \(Y=1\) versus \(Y=0\), we'll have to find a second one that parametrizes the logit function of \(Y=2\) versus \(Y=0\).</p>
+                <p class="lang-pt d-none">No caso do Classificador de Flores Íris, temos três possíveis classificações: setosa (0), virginica (1) ou versicolor (2). Portanto, ao invés de termos uma função logística, parametrizada no logarítimo das chances (logit) de \(Y=1\) versus \(Y=0\), teremos de encontrar uma segunda que parametrize a função <i>logit</i> de \(Y=2\) versus \(Y=0\).</p>
+                    
+                $$\begin{eqnarray}
+                g_1(\mathbf{x}) &=& \ln \left(\frac{p(Y=1|\mathbf{x})}{p(Y=0|\mathbf{x})}\right) = \ln\left(\frac{\pi_1(\mathbf{x})}{\pi_0(\mathbf{x})}\right) = \beta_1^T \mathbf{x}\\
+                g_2(\mathbf{x}) &=& \ln \left(\frac{p(Y=2|\mathbf{x})}{p(Y=0|\mathbf{x})}\right) = \ln\left(\frac{\pi_2(\mathbf{x})}{\pi_0(\mathbf{x})}\right) = \beta_2^T \mathbf{x}\\
+                \end{eqnarray}$$
+                
+                <p class="lang-en">Knowing that,</p>
+                <p class="lang-pt d-none">Sabendo que,</p>
+
+                $$\begin{equation}
+                \pi_0(\mathbf{x}) + \pi_1(\mathbf{x}) + \pi_2(\mathbf{x}) = 1
+                \end{equation}$$
+
+                <p class="lang-en">we can solve the system of three equations to find \(\pi_j\), for \(j = 0, 1, 2\):</p>
+                <p class="lang-pt d-none">podemos resolver o sistema de três equações de modo a encontrar \(\pi_j\), para \(j = 0, 1, 2\):</p>
+
+                $$\begin{eqnarray}
+                \pi_0(\mathbf{x}) &=& \frac{1}{1 + e^{g_1(\mathbf{x})} + e^{g_2(\mathbf{x})}} \\
+                \pi_1(\mathbf{x}) &=& \frac{e^{g_1(\mathbf{x})}}{1 + e^{g_1(\mathbf{x})} + e^{g_2(\mathbf{x})}} \\
+                \pi_2(\mathbf{x}) &=& \frac{e^{g_2(\mathbf{x})}}{1 + e^{g_1(\mathbf{x})} + e^{g_2(\mathbf{x})}} 
+                \end{eqnarray}$$
+
+                <p class="lang-en">The conditional likelihood for a sample of \(m\) independent observations is</p>
+                <p class="lang-pt d-none">A verosimilhança condicional para uma amostra de \(m\) observações independentes é</p>
+                
+                $$\begin{equation}
+                l(\beta) = \prod_{i=1}^m \left[\pi_0(\mathbf{x}_i)^{y_{0i}} \pi_1(\mathbf{x}_i)^{y_{1i}} \pi_2(\mathbf{x}_i)^{y_{2i}}\right].
+                \end{equation}$$
+
+                <p class="lang-en">We assumed the encoding of the outcomes as:</p>
+                <p class="lang-pt d-none">Assumismo que as classes foram codificadas da seguinte maneira:</p>
+
+                $$\begin{eqnarray}
+                \text{if } Y = 0, &&\text{ then } Y_0 = 1, \quad Y_1 = 0, \quad Y_2 = 0; \\
+                \text{if } Y = 1, &&\text{ then } Y_0 = 0, \quad Y_1 = 1, \quad Y_2 = 0; \\
+                \text{if } Y = 2, &&\text{ then } Y_0 = 0, \quad Y_1 = 0, \quad Y_2 = 1. \\ 
+                \end{eqnarray}$$
+
+                <p class="lang-en">Then, for each outcome \(Y\), \(\sum_{j=0}^2 Y_j = 1\). Put it in other form, \(\sum_{j=0}^2 y_{ji} = 1\) for each outcome \(i\). Taking this fact in consideration, the log-likelihood is:</p>
+                <p class="lang-pt d-none">Então, para cada resultado \(Y\), \(\sum_{j=0}^2 Y_j = 1\). Ou seja, \(\sum_{j=0}^2 y_{ji} = 1\) para cada resultado \(i\). Tendo este facto em consideração, a log-verosimilhança é:</p>
+
+                $$\begin{equation}
+                L(\beta) = \ln\left(l(\beta)\right) = \sum_{i=1}^m \left[ y_{1i} \pi_1(\mathbf{x}_i) + y_{2i} \pi_2(\mathbf{x}_i)  - \ln\left(1 + e^{g_1(\mathbf{x}_i)} + e^{g_2(\mathbf{x}_i)}\right) \right]
+                \end{equation}$$
+
+                <p class="lang-en">The gradient of the log-likelihood is, in general form:</p>
+                <p class="lang-pt d-none">O gradiente da log-verosimilhança é, na sua forma geral:</p>
+
+                $$\begin{equation}
+                \frac{\partial L(\beta)}{\partial \beta_{jk}} = \sum_{i=1}^m \left[x_{ki}\left(y_{ji} - \pi_j (\mathbf{x}_i)\right) \right]
+                \end{equation}$$
+
+                <p class="lang-en">for \(j = 1, 2 \), and \(k = 0, 1, 2, ..., p\), with \(x_{0i} = 1\) for each subject.</p>
+                <p class="lang-pt d-none">para \(j = 1, 2 \), e \(k = 0, 1, 2, ..., p\), com \(x_{0i} = 1\) para cada amostra.</p>
+
+                <p class="lang-en">For the genral case of \(h\) outcomes, we solve the following system of equations and find the log-likelihood in the same manner as above:</p>
+                <p class="lang-pt d-none">Para o caso geral de \(h\) classes, podemos resolver o seguinte sistema de equações e encontrar a log-verosimilhança da mesma maneira que acima:</p>
+
+                $$\begin{eqnarray}
+                g_i(\mathbf{x}) &=& \ln\left(\frac{\pi_i(\mathbf{x})}{\pi_0(\mathbf{x})}\right) = \beta_i^T \mathbf{x},  \quad i = 1, ..., h - 1; \\
+                \sum_{i = 0}^{h-1} \pi_i (\mathbf{x}) &=& 1.
+                \end{eqnarray}$$
+            </div>
+
+        </section>
+
+
+        <section id="implementation" class="mb-5">
+            <div>
+                <h2 class="lang-en">Python Implementation</h2>
+                <h2 class="lang-pt d-none">Implementação Python</h2>
+
+                <p class="lang-en">Scikit-learn makes it simple to apply logistic regression:</p>
+                <p class="lang-pt d-none">O módulo Scikit-learn torna fácil aplicar a regressão logística:</p>
+                <pre class="language-python">
+                    <code>from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+model.fit(X_train, y_train)</code>
+                </pre>
+
+                <p class="lang-en">It is possible to tweak the model parameters, such as the choice of optimization algorithm, to better fit the problem at hand:</p>
+                <p class="lang-pt d-none">É possível ajustar os paramêtros do modelo, tal como a escolha de algoritimo de optimização, para melhor ajustar o problema em causa:</p>
+                <pre class="language-python"><code>model = LogisticRegression(solver='lbfgs')</code>
+                </pre>
+
+                <table class="solver-table lang-en">
+                    <caption style="caption-side: top; text-align: left; font-weight: bold; padding: 10px 0;">
+                        Table 1: Comparison of solvers available in <code>LogisticRegression()</code> from scikit-learn
+                    </caption>
+                    <thead>
+                        <tr>
+                        <th>Solver</th>
+                        <th>Multiclass Support</th>
+                        <th>Penalty</th>
+                        <th>Strengths</th>
+                        <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td><code>liblinear</code></td>
+                        <td>One-vs-Rest (OvR)</td>
+                        <td>L1, L2</td>
+                        <td>Good for small datasets</td>
+                        <td>Does not support multinomial loss; uses coordinate descent</td>
+                        </tr>
+                        <tr>
+                        <td><code>lbfgs</code></td>
+                        <td>OvR & Multinomial</td>
+                        <td>L2</td>
+                        <td>Efficient on large datasets</td>
+                        <td>Recommended default solver for multiclass problems</td>
+                        </tr>
+                        <tr>
+                        <td><code>newton-cg</code></td>
+                        <td>OvR & Multinomial</td>
+                        <td>L2</td>
+                        <td>Handles large data well</td>
+                        <td>Uses Newton’s method; can be slower than lbfgs</td>
+                        </tr>
+                        <tr>
+                        <td><code>sag</code></td>
+                        <td>OvR & Multinomial</td>
+                        <td>L2</td>
+                        <td>Faster for large datasets with many samples</td>
+                        <td>Requires data to be scaled; only works with dense input</td>
+                        </tr>
+                        <tr>
+                        <td><code>saga</code></td>
+                        <td>OvR & Multinomial</td>
+                        <td>L1, L2, ElasticNet</td>
+                        <td>Handles all penalties; works well with large datasets</td>
+                        <td>Only solver that supports ElasticNet and sparse data with L1</td>
+                        </tr>
+                        <tr>
+                        <td><code>newton-cholesky</code></td>
+                        <td>OvR</td>
+                        <td>L2</td>
+                        <td>Very fast on small datasets</td>
+                        <td>Introduced in scikit-learn 1.2; dense data only</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="solver-table lang-pt d-none">
+                <caption style="caption-side: top; text-align: left; font-weight: bold; padding: 10px 0;">
+                    Tabela 1: Comparação entre os solvers disponíveis na função <code>LogisticRegression()</code> do scikit-learn
+                </caption>
+                <thead>
+                    <tr>
+                    <th>Solver</th>
+                    <th>Suporte Multiclasse</th>
+                    <th>Penalização</th>
+                    <th>Pontos Fortes</th>
+                    <th>Observações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td><code>liblinear</code></td>
+                    <td>One-vs-Rest (OvR)</td>
+                    <td>L1, L2</td>
+                    <td>Bom para conjuntos de dados pequenos</td>
+                    <td>Não suporta perda multinomial; usa descida coordenada</td>
+                    </tr>
+                    <tr>
+                    <td><code>lbfgs</code></td>
+                    <td>OvR e Multinomial</td>
+                    <td>L2</td>
+                    <td>Eficiente em grandes conjuntos de dados</td>
+                    <td>Solver padrão recomendado para problemas multiclasse</td>
+                    </tr>
+                    <tr>
+                    <td><code>newton-cg</code></td>
+                    <td>OvR e Multinomial</td>
+                    <td>L2</td>
+                    <td>Lida bem com dados de grande dimensão</td>
+                    <td>Utiliza o método de Newton; pode ser mais lento que o lbfgs</td>
+                    </tr>
+                    <tr>
+                    <td><code>sag</code></td>
+                    <td>OvR e Multinomial</td>
+                    <td>L2</td>
+                    <td>Mais rápido em conjuntos de dados com muitas amostras</td>
+                    <td>Requer dados normalizados; apenas funciona com dados densos</td>
+                    </tr>
+                    <tr>
+                    <td><code>saga</code></td>
+                    <td>OvR e Multinomial</td>
+                    <td>L1, L2, ElasticNet</td>
+                    <td>Suporta todas as penalizações; bom para dados grandes</td>
+                    <td>Único solver que suporta ElasticNet e dados esparsos com L1</td>
+                    </tr>
+                    <tr>
+                    <td><code>newton-cholesky</code></td>
+                    <td>OvR</td>
+                    <td>L2</td>
+                    <td>Muito rápido em conjuntos de dados pequenos</td>
+                    <td>Introduzido no scikit-learn 1.2; apenas para dados densos</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+                
+            </div>
+        </section>
+
+        <section id="conclusion" class="mb-5">
+            <div class="lang-en">
+                <h2>Conclusion</h2>
+                <p>Despite its simplicity, Logistic Regression can perform surprisingly well in many real-world classification problems.</p>
+                <p>It also presents several advantageous properties:</p>
+                <ul>
+                <li>It directly models the label probability without requiring prior assumptions about data distribution, thus avoiding issues such as unrealistic or inappropriate hypothetical distributions.</li>
+                <li>In tasks that rely on probability to support decision-making, it is particularly useful as it predicts class labels along with their associated probabilities.</li>
+                <li>The objective function of Logistic Regression is convex and differentiable to all orders, which ensures desirable mathematical properties and makes it solvable using numerical optimization methods.</li>
+                </ul>
+            </div>
+
+            <div class="lang-pt d-none">
+                <h2>Conclusão</h2>
+                <p>Apesar da sua simplicidade, a Regressão Logística pode ter um desempenho surpreendente em muitos problemas reais de classificação.</p>
+                <p>Apresenta ainda várias propriedades vantajosas:</p>
+                <ul>
+                <li>Modela diretamente a probabilidade dos resultados sem exigir pressupostos prévios sobre a distribuição dos dados, evitando assim problemas como distribuições hipotéticas irrealistas ou inapropriadas.</li>
+                <li>Em tarefas que utilizam a probabilidade para apoiar a tomada de decisões, revela-se particularmente útil, pois prevê os resultados juntamente com as respetivas probabilidades.</li>
+                <li>A função objetivo da Regressão Logística é convexa e possui derivadas de todas as ordens, o que lhe confere propriedades matemáticas desejáveis e permite resolvê-la através de métodos de otimização numérica.</li>
+                </ul>
+            </div>
+        </section>
+
+
+         <section id="references" class="mb-5">
+            <div>
+                <h2 class="lang-en">References</h2>
+                <h2 class="lang-pt d-none">Referências</h2>
+                <p>J.S. Cramer, 2002, "<a href="https://ideas.repec.org/p/tin/wpaper/20020119.html"><b>The Origins of Logistic Regression</b></a>", "<i><a href="https://ideas.repec.org/s/tin/wpaper.html">Tinbergen Institute Discussion Papers</a></i>", Tinbergen Institute, number 02-119/4, Dec.</p>
+                <p>Hosmer Jr., D.W., Lemeshow, S. and Sturdivant, R.X., 2013, "<a href="https://doi.org/10.1002/9781118548387"><b>Applied Logistic Regression</b></a>"", 3rd Edition, John Wiley & Sons, Hoboken, NJ.</p>
+                <p>Zhou, Z.-H., 2021, "<a href="https://doi.org/10.1007/978-981-15-1967-3"><b>Machine Learning</b></a>"", Springer Nature.</p>
+            </div>
+        </section>
+    </article>
+  </div>
+</section>
+
+
+
+        <!-- Bootstrap JS (optional) -->
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/script-portfolio.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script>
+            MathJax = {
+                tex: {
+                tags: 'ams', // Enables LaTeX-style \label and \ref
+                }
+            };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>
