@@ -161,29 +161,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animateWords("animated-text");
 
+
 });
 
 
-// HArd Skills
-
-const container = document.getElementById('scrollContainer');
-const content = document.getElementById('scrollContent');
-
-// Duplicate content
-content.innerHTML += content.innerHTML;
-
-let scrollAmount = 0;
-
-function animate() {
-  scrollAmount += 0.5; // adjust speed
-  if (scrollAmount >= content.scrollWidth / 2) {
-    scrollAmount = 0;
-  }
-  container.scrollLeft = scrollAmount;
-  requestAnimationFrame(animate);
-  }
-
-animate();
 
 
 // Animate Text

@@ -123,7 +123,7 @@
                             <span>Supervised</span> <span>Learning</span> <span>algorith:</span> <span>Logistic</span> <span>Regression.</span>
                             <span>To</span> <span>know</span> <span>more</span> <span>about</span> <span>this</span> <span>project,</span> <span>and</span>
                             <span>the</span> <span>algorithm</span> <span>behind</span> <span>it,</span> <span>read</span> <span>my</span>
-                            <a href="../../../blog/logistic-regression.html" target="_blank" class="text-decoration-none"><span class="special-word">blog</span></a> <span>post.</span>
+                            <a href="https://medium.com/@ndilokelwa.luis/a-sigmoid-story-7416a19c8377" target="_blank" class="text-decoration-none"><span class="special-word">blog</span></a> <span>post.</span>
                         </p>
                     </div>
                     <div class="col col-5 lang-en">
@@ -188,7 +188,7 @@
                             <span>de</span> <span>Aprendizagem</span> <span>Supervisionada:</span> <span>a</span> <span>Regressão</span> <span>Logística.</span>
                             <span>Para</span> <span>saber</span> <span>mais</span> <span>sobre</span> <span>este</span> <span>projeto</span>
                             <span>e</span> <span>o</span> <span>algoritmo</span> <span>por</span> <span>detrás</span> <span>dele,</span>
-                            <span>lê</span> <span>o</span> <span>meu</span> <a href="../../../blog/logistic-regression.html" target="_blank" class="text-decoration-none"><span class="special-word">artigo</span></a> <span>no</span> <span>blogue.</span>
+                            <span>lê</span> <span>o</span> <span>meu</span> <a href="https://medium.com/@ndilokelwa.luis/a-sigmoid-story-7416a19c8377" target="_blank" class="text-decoration-none"><span class="special-word">artigo</span></a> <span>no</span> <span>blogue.</span>
                         </p>
                     </div>
                     <div class="col col-5 lang-pt d-none">
@@ -244,29 +244,8 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">Predict Iris Flower</button>
-
-                <!-- {% if prediction %}
-                    <div class="mt-3 fw-bold text-success">
-                    Predicted Class: {{ prediction }}
-                    </div>
-                {% endif %} -->
             </form>
         </section>
-        <div class="modal fade" id="predictionModal" tabindex="-1" aria-labelledby="predictionModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content text-center">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="predictionModalLabel">Prediction Result</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h4 id="predicted-species"></h4>
-                    <img id="predicted-image" src="" alt="Predicted Iris" class="img-fluid rounded" style="max-height: 250px;">
-                </div>
-                </div>
-            </div>
-        </div>
-        <div id="prediction-result" data-prediction="{{ prediction|lower }}"></div>
         <hr class="mt-3 mb-3">
         <section  class="mb-5">
             <div class="container">
@@ -279,41 +258,86 @@
                         <a href="https://github.com/ndilokelwa" target="_blank" class="text-decoration-none text-reset">GitHub</a>
                     </div>
                     <div class="col col-4 text-end">
-                        <a href="assets/cv.pdf" target="_blank" download="resume.pdf" class="text-decoration-none text-reset">Resume</a>
+                        <a href="{{ url_for('static', filename='assets/cv.pdf') }}" 
+                            target="_blank" 
+                            download="resume.pdf" 
+                            class="text-decoration-none text-reset">
+                            Resume
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="modal fade" id="predictionModal" tabindex="-1" aria-labelledby="predictionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-center">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="predictionModalLabel">Prediction Result</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 id="predicted-species"></h4>
+                        <p class="mb-1">
+                            <span class="fw-semibold">Model CV accuracy:</span>
+                            <span id="model-accuracy"></span>
+                        </p>
+                        <p class="mb-3" id="confidence-row" style="display:none;">
+                            <span class="fw-semibold">Confidence for this prediction:</span>
+                            <span id="pred-confidence"></span>
+                        </p>
+                        <img id="predicted-image" src="" alt="Predicted Iris" class="img-fluid rounded" style="max-height: 250px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="prediction-result"
+            data-prediction="{{ prediction|lower }}"
+            data-accuracy="{{ '%.2f' % (accuracy * 100) if accuracy is not none else '' }}"
+            data-confidence="{{ '%.2f' % (confidence * 100) if confidence is not none else '' }}">
+        </div>
+        
+        
         <!-- Bootstrap JS (optional) -->
         <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/script.js') }}"></script>
         <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const prediction = "{{ prediction|lower }}";
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.getElementById("prediction-result");
+  const prediction = (el.dataset.prediction || "").toLowerCase();
+  const acc = el.dataset.accuracy;      // already percent string like "97.20"
+  const conf = el.dataset.confidence;   // percent string like "99.10" (may be empty)
 
-                if (prediction && prediction !== "none" && prediction !== "error") {
-                const nameMap = {
-                    "setosa": "Iris Setosa",
-                    "versicolor": "Iris Versicolor",
-                    "virginica": "Iris Virginica"
-                };
+  if (prediction && prediction !== "none" && !prediction.startsWith("error")) {
+    const nameMap = {
+      "setosa": "Iris Setosa",
+      "versicolor": "Iris Versicolor",
+      "virginica": "Iris Virginica"
+    };
 
-                const imageMap = {
-                    "setosa": "{{ url_for('static', filename='assets/setosa.jpg') }}",
-                    "versicolor": "{{ url_for('static', filename='assets/versicolor.jpg') }}",
-                    "virginica": "{{ url_for('static', filename='assets/virginica.png') }}"
-                };
+    const imageMap = {
+      "setosa": "{{ url_for('static', filename='assets/setosa.jpg') }}",
+      "versicolor": "{{ url_for('static', filename='assets/versicolor.jpg') }}",
+      "virginica": "{{ url_for('static', filename='assets/virginica.png') }}"
+    };
 
-                if (nameMap[prediction]) {
-                    document.getElementById("predicted-species").innerText = nameMap[prediction];
-                    document.getElementById("predicted-image").src = imageMap[prediction];
+    if (nameMap[prediction]) {
+      document.getElementById("predicted-species").innerText = nameMap[prediction];
+      document.getElementById("predicted-image").src = imageMap[prediction];
 
-                    const modal = new bootstrap.Modal(document.getElementById('predictionModal'));
-                    modal.show();
-                }
-                }
-            });
-        </script>
+      // Fill accuracy and confidence (if available)
+      document.getElementById("model-accuracy").innerText = acc ? `${acc}%` : "—";
+      if (conf) {
+        document.getElementById("pred-confidence").innerText = `${conf}%`;
+        document.getElementById("confidence-row").style.display = "";
+      }
 
-    </body>
+      const modal = new bootstrap.Modal(document.getElementById('predictionModal'));
+      modal.show();
+    }
+  }
+});
+</script>
+
+</body>
+    
 </html>
