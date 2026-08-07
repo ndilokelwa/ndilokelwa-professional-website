@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>EGraB | Ndilokelwa Luis</title>
+    <meta name="description" content="EGraB is an aerospace Systems Engineering portfolio project exploring a solar-energy unmanned aerial system through MBSE, SysML, requirements engineering, architecture, modelling, simulation, and verification.">
+    <meta name="keywords" content="Ndilokelwa Luis, EGraB, aerospace systems engineering, systems engineering, MBSE, SysML, requirements engineering, solar energy, unmanned aerial system, UAS, modelling, simulation">
+    <meta name="author" content="Ndilokelwa Luis">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ndilokelwa.tech/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="EGraB | Aerospace Systems Engineering Project">
+    <meta property="og:description" content="A Systems Engineering and MBSE portfolio project for a solar-energy unmanned aerial system.">
+    <meta property="og:image" content="https://ndilokelwa.tech/assets/egrab.jpg">
+    <meta property="og:url" content="https://ndilokelwa.tech/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EGraB | Aerospace Systems Engineering Project">
+    <meta name="twitter:description" content="A Systems Engineering and MBSE portfolio project for a solar-energy unmanned aerial system.">
+    <meta name="twitter:image" content="https://ndilokelwa.tech/assets/egrab.jpg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/logo/favicon-16x16.png">
+    <link rel="icon" href="../../assets/logo/favicon.ico">
+    <link rel="manifest" href="../../assets/logo/site.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        .project-image {
+            width: 100%;
+            max-height: 620px;
+            object-fit: cover;
+        }
+
+        .project-status {
+            border: 1px solid currentColor;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.55rem 1rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .status-dot {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 50%;
+            background: currentColor;
+            animation: pulse 1.8s ease-in-out infinite;
+        }
+
+        .project-section {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .project-label {
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            opacity: 0.65;
+        }
+
+        .coming-soon {
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .coming-soon-inner {
+            max-width: 850px;
+        }
+
+        .coming-soon-title {
+            font-size: clamp(2.5rem, 8vw, 7rem);
+            line-height: 0.95;
+            margin-bottom: 2rem;
+        }
+
+        .project-divider {
+            opacity: 0.25;
+        }
+
+        #animated-text span,
+        #animated-text-pt span {
+            font-size: 1.7rem;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.35; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.15); }
+        }
+
+        @media (max-width: 767.98px) {
+            .project-image {
+                max-height: 420px;
+            }
+
+            .project-intro-image {
+                margin-top: 2rem;
+            }
+
+            #animated-text span,
+            #animated-text-pt span {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "EGraB",
+        "author": {
+            "@type": "Person",
+            "name": "Ndilokelwa Luis",
+            "url": "https://ndilokelwa.tech/"
+        },
+        "description": "A Systems Engineering and MBSE portfolio project exploring the architecture and lifecycle engineering of a solar-energy unmanned aerial system.",
+        "keywords": [
+            "Systems Engineering",
+            "MBSE",
+            "SysML",
+            "Requirements Engineering",
+            "Aerospace Engineering",
+            "Unmanned Aerial Systems",
+            "Solar Energy"
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row alingn-content-center">
+                <div class="col col-2 col-md-1 align-text-right">
+                    <a href="../../portfolio.html" class="text-decoration-none text-reset">
+                        <i class="bi bi-arrow-left fs-6"></i>
+                        <span class="intro small disappear">
+                            <span class="lang-en">Portfolio</span>
+                            <span class="lang-pt d-none">Portefólio</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col col-3 col-md-4 align-text-right">
+                    <span class="intro" id="intro-name" data-text-large="Ndilokelwa Luis" data-text-small="Andi Luis"></span>
+                </div>
+
+                <div class="col col-3 col-md-4 align-text-right">
+                    <span class="intro" id="intro-role" data-text-large="Aerospace Systems Engineer" data-text-small="Aerospace SE"></span>
+                </div>
+
+                <div class="col col-2 col-md-2 align-text-left disappear">
+                    <span id="intro-location"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                        <circle cx="8" cy="8" r="8"/>
+                    </svg>
+                    <span id="intro-time"></span>
+                </div>
+
+                <div class="col col-1 col-md-1 form-check form-switch ms-auto d-lg-block d-flex">
+                    <input class="form-check-input" type="checkbox" id="languageSwitch">
+                    <label class="form-check-label" for="languageSwitch"><span class="lang"></span></label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="row mt-5 mb-3">
+                    <div class="col col-12 text-center">
+                        <div class="project-label fade-line" style="animation-delay: 0.1s;">
+                            <span class="lang-en">Systems Engineering Portfolio Project</span>
+                            <span class="lang-pt d-none">Projeto de Portefólio em Engenharia de Sistemas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col col-12">
+                        <div class="fade-line display-2 text-center" style="animation-delay: 0.2s;">EGraB</div>
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col col-12 text-center">
+                        <div class="project-status">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            <span class="lang-en">Project in development</span>
+                            <span class="lang-pt d-none">Projeto em desenvolvimento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5">
+                    <!-- English -->
+                    <div class="col col-7 lang-en" id="animated-text">
+                        <p>
+                            <span>EGraB</span> <span>is</span> <span>an</span> <span>aerospace</span> <span>Systems</span> <span>Engineering</span> <span>portfolio</span> <span>project</span>
+                            <span>focused</span> <span>on</span> <span>the</span> <span>development</span> <span>of</span> <span>a</span> <span>solar-energy</span> <span>unmanned</span> <span>aerial</span> <span>system</span>
+                            <span>capable</span> <span>of</span> <span>generating,</span> <span>storing</span> <span>and</span> <span>managing</span> <span>energy</span> <span>while</span> <span>operating</span> <span>as</span> <span>an</span> <span>airborne</span> <span>platform.</span>
+                        </p>
+
+                        <p>
+                            <span>The</span> <span>project</span> <span>is</span> <span>being</span> <span>developed</span> <span>using</span> <span>a</span> <span>model-based</span> <span>Systems</span> <span>Engineering</span> <span>approach,</span>
+                            <span>connecting</span> <span>stakeholder</span> <span>needs,</span> <span>requirements,</span> <span>system</span> <span>architecture,</span> <span>behaviour,</span> <span>interfaces,</span>
+                            <span>engineering</span> <span>analysis</span> <span>and</span> <span>verification</span> <span>through</span> <span>a</span> <span>traceable</span> <span>lifecycle</span> <span>model.</span>
+                        </p>
+
+                        <p>
+                            <span>EGraB</span> <span>also</span> <span>serves</span> <span>as</span> <span>a</span> <span>practical</span> <span>demonstration</span> <span>of</span> <span>my</span> <span>work</span> <span>in</span>
+                            <span>MBSE,</span> <span>SysML,</span> <span>requirements</span> <span>engineering,</span> <span>modelling</span> <span>and</span> <span>simulation,</span> <span>system</span> <span>architecture</span> <span>and</span> <span>verification</span>
+                            <span>within</span> <span>an</span> <span>aerospace</span> <span>context.</span>
+                        </p>
+                    </div>
+
+                    <!-- Portuguese -->
+                    <div class="col col-7 lang-pt d-none" id="animated-text-pt">
+                        <p>
+                            <span>O</span> <span>EGraB</span> <span>é</span> <span>um</span> <span>projeto</span> <span>de</span> <span>portefólio</span> <span>em</span> <span>Engenharia</span> <span>de</span> <span>Sistemas</span> <span>Aeroespaciais</span>
+                            <span>centrado</span> <span>no</span> <span>desenvolvimento</span> <span>de</span> <span>um</span> <span>sistema</span> <span>aéreo</span> <span>não</span> <span>tripulado</span> <span>movido</span> <span>a</span> <span>energia</span> <span>solar,</span>
+                            <span>capaz</span> <span>de</span> <span>gerar,</span> <span>armazenar</span> <span>e</span> <span>gerir</span> <span>energia</span> <span>enquanto</span> <span>opera</span> <span>como</span> <span>uma</span> <span>plataforma</span> <span>aérea.</span>
+                        </p>
+
+                        <p>
+                            <span>O</span> <span>projeto</span> <span>está</span> <span>a</span> <span>ser</span> <span>desenvolvido</span> <span>através</span> <span>de</span> <span>uma</span> <span>abordagem</span> <span>de</span> <span>Engenharia</span> <span>de</span> <span>Sistemas</span> <span>Baseada</span> <span>em</span> <span>Modelos,</span>
+                            <span>ligando</span> <span>necessidades</span> <span>dos</span> <span>stakeholders,</span> <span>requisitos,</span> <span>arquitetura</span> <span>do</span> <span>sistema,</span> <span>comportamento,</span> <span>interfaces,</span>
+                            <span>análise</span> <span>de</span> <span>engenharia</span> <span>e</span> <span>verificação</span> <span>através</span> <span>de</span> <span>um</span> <span>modelo</span> <span>de</span> <span>ciclo</span> <span>de</span> <span>vida</span> <span>rastreável.</span>
+                        </p>
+
+                        <p>
+                            <span>O</span> <span>EGraB</span> <span>serve</span> <span>também</span> <span>como</span> <span>uma</span> <span>demonstração</span> <span>prática</span> <span>do</span> <span>meu</span> <span>trabalho</span> <span>em</span>
+                            <span>MBSE,</span> <span>SysML,</span> <span>engenharia</span> <span>de</span> <span>requisitos,</span> <span>modelação</span> <span>e</span> <span>simulação,</span> <span>arquitetura</span> <span>de</span> <span>sistemas</span> <span>e</span> <span>verificação</span>
+                            <span>num</span> <span>contexto</span> <span>aeroespacial.</span>
+                        </p>
+                    </div>
+
+                    <div class="col col-5 project-intro-image">
+                        <img
+                            class="img-fluid rounded project-image"
+                            src="../../assets/proj/egrab.png"
+                            alt="Conceptual idealization of a solar-energy unmanned aerial system for airborne power generation">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="project-divider">
+
+        <section class="project-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12 coming-soon">
+                        <div class="coming-soon-inner">
+                            <div class="coming-soon-title fade-line">
+                                <span class="lang-en">Coming Soon</span>
+                                <span class="lang-pt d-none">Em Breve</span>
+                            </div>
+
+                            <div class="lang-en">
+                                <p class="lead mb-4">
+                                    EGraB is currently under active development.
+                                </p>
+                                <p>
+                                    The complete project will document the Systems Engineering journey from stakeholder needs and system requirements to functional and physical architecture, interfaces, engineering analyses, trade studies, verification evidence and model traceability.
+                                </p>
+                                <p class="mb-0">
+                                    As the model evolves, this page will become the public engineering record of the project — showing not only the final architecture, but the reasoning, decisions and evidence behind it.
+                                </p>
+                            </div>
+
+                            <div class="lang-pt d-none">
+                                <p class="lead mb-4">
+                                    O EGraB encontra-se atualmente em desenvolvimento ativo.
+                                </p>
+                                <p>
+                                    O projeto completo irá documentar o percurso de Engenharia de Sistemas desde as necessidades dos stakeholders e requisitos do sistema até à arquitetura funcional e física, interfaces, análises de engenharia, estudos de compromisso, evidências de verificação e rastreabilidade do modelo.
+                                </p>
+                                <p class="mb-0">
+                                    À medida que o modelo evoluir, esta página tornar-se-á no registo público de engenharia do projeto — apresentando não apenas a arquitetura final, mas também o raciocínio, as decisões e as evidências que a sustentam.
+                                </p>
+                            </div>
+
+                            <div class="mt-5">
+                                <span class="project-status">
+                                    <span class="status-dot" aria-hidden="true"></span>
+                                    <span class="lang-en">Architecture in progress</span>
+                                    <span class="lang-pt d-none">Arquitetura em desenvolvimento</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <hr class="mt-3 mb-3">
+
+    <section class="mb-5">
+        <div class="container">
+            <div class="row h4">
+                <div class="col col-4">
+                    <a href="mailto:andi@ndilokelwa.tech" class="text-decoration-none text-reset">andi@ndilokelwa.tech</a>
+                </div>
+
+                <div class="col col-4 text-center">
+                    <a href="https://www.linkedin.com/in/andiluis" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-reset">LinkedIn</a><br>
+                    <a href="https://github.com/ndilokelwa" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-reset">GitHub</a>
+                </div>
+
+                <div class="col col-4 text-end">
+                    <a href="../../assets/cv.pdf" target="_blank" class="text-decoration-none text-reset">
+                        <span class="lang-en">Resume</span>
+                        <span class="lang-pt d-none">CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/script-project.js"></script>
+</body>
+</html>

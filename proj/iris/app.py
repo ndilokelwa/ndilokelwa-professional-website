@@ -9,8 +9,8 @@ MODEL_PATH = APP_ROOT / "model.pkl"
 
 app = Flask(
     __name__,
-    static_url_path="/proj/iris/static",
-    template_folder="templates"
+    static_url_path="/static",
+    template_folder="templates",
 )
 
 with open(MODEL_PATH, "rb") as f:

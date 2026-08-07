@@ -31,11 +31,46 @@ header {
 
 .card-bg-effect {
     background-color: rgba(140, 140, 140, 0.5);
-    height: 20rem;
+    min-height: 22rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     z-index: 2;
     border: none !important;
+}
+
+.card-bg-effect .image-container {
+  flex: 0 0 auto;
+}
+
+.card-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-height: 3.25rem;
+  margin-top: auto;
+  padding-bottom: 1rem;
+}
+
+.card-caption-title {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Clamp the visible language span so ellipsis works */
+.card-caption-title > .lang-en,
+.card-caption-title > .lang-pt {
+  white-space: normal;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-bg-effect-small {
@@ -45,6 +80,20 @@ header {
     -webkit-backdrop-filter: blur(5px);
     z-index: 2;
     border: none !important;
+}
+
+.resume-card-credentials {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.35;
+  padding: 0 0.75rem 1.5rem;
+  pointer-events: none;
 }
 
 .card-bg-effect-stack {
@@ -68,13 +117,23 @@ header {
   white-space: nowrap;
 }
 
+/* Photo card: keep a fixed frame and fill it with the image */
+.card-bg-effect:has(> .uniform-image-big) {
+  height: 22rem;
+  min-height: 22rem;
+  overflow: hidden;
+  padding: 0;
+}
+
 /* images */
 .uniform-image-big {
-  width: 100%;         /* desired width */
-  height: 20rem;        /* desired height */
-  object-fit: cover;    /* crop to fill box */
-  object-position: center; /* center the image */
-  border-radius: 8px;   /* optional rounding */
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  display: block;
 }
 
 .stack {
@@ -257,7 +316,20 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.4s ease;
+}
+
+/* Second blog card (UPA): fill the frame, keep the top of the image visible */
+.blog-card-upa .image-zoom-wrapper {
+  height: 250px;
+}
+
+.blog-card-upa .image-zoom-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .card:hover .image-zoom-wrapper img {
