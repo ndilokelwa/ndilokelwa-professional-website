@@ -36,8 +36,8 @@
     banner.innerHTML = `
       <div class="cookie-banner-inner">
         <p class="cookie-banner-text">
-          <span class="lang-en">This site uses cookies to analyse visit traffic anonymously.</span>
-          <span class="lang-pt d-none">Este site utiliza cookies para analisar o tráfego de visitas de forma anónima.</span>
+          <span class="lang-en">This site uses cookies to analyse visit traffic anonymously. See the <a href="/privacidade.html" class="cookie-banner-link">Privacy Policy</a>.</span>
+          <span class="lang-pt d-none">Este site utiliza cookies para analisar o tráfego de visitas de forma anónima. Consulte a <a href="/privacidade.html" class="cookie-banner-link">Política de Privacidade</a>.</span>
         </p>
         <div class="cookie-banner-actions">
           <button type="button" id="btn-aceitar" class="cookie-btn cookie-btn-accept">

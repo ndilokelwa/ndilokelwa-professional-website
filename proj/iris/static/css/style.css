@@ -112,6 +112,38 @@ header {
   color: #4b0082; /* dark purple (Indigo) */
 }
 
+/* Site footer */
+.site-footer-row {
+  font-size: clamp(1rem, 2.4vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.site-footer-email a {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.site-footer-privacy {
+  font-size: 0.75em;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.site-footer-privacy:hover {
+  opacity: 1;
+}
+
+@media (max-width: 767.98px) {
+  .site-footer-row {
+    font-size: 1rem;
+  }
+
+  .site-footer-email {
+    text-align: center;
+  }
+}
+
 /* Cookie consent banner */
 #cookie-banner {
   position: fixed;
@@ -153,6 +185,12 @@ header {
   line-height: 1.4;
   color: #212529;
   text-align: left;
+}
+
+.cookie-banner-link {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .cookie-banner-actions {

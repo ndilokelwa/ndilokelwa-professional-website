@@ -28,6 +28,14 @@ def contact():
 def portfolio():
     return send_from_directory(".", "portfolio.html")
 
+@site.route("/privacidade.html")
+def privacidade():
+    return send_from_directory(".", "privacidade.html")
+
+@site.route("/thank-you.html")
+def thank_you():
+    return send_from_directory(".", "thank-you.html")
+
 @site.route('/assets/<path:filename>')
 def assets(filename):
     # Serve files from /root/assets
