@@ -112,3 +112,82 @@ header {
   color: #4b0082; /* dark purple (Indigo) */
 }
 
+/* Cookie consent banner */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  display: none;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+#cookie-banner.is-visible {
+  display: block;
+}
+
+.cookie-banner-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  pointer-events: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: rgba(140, 140, 140, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-family: Inter, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.cookie-banner-text {
+  margin: 0;
+  flex: 1 1 16rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #212529;
+  text-align: left;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cookie-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.cookie-btn-accept {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.cookie-btn-accept:hover {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.cookie-btn-reject {
+  background-color: transparent;
+  color: #212529;
+  border: 1px solid rgba(33, 37, 41, 0.35);
+}
+
+.cookie-btn-reject:hover {
+  background-color: rgba(33, 37, 41, 0.08);
+}
+
